@@ -1,0 +1,8 @@
+set terminal png font arial
+set title "Time complexity for merge sort"
+set autoscale
+set xlabel "Size of input"
+set ylabel "Sorting time (in secs)"
+set grid
+set output "plot.png"
+plot "plot.dat" t "quicksort" with lines
