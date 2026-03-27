@@ -1,5 +1,5 @@
 set terminal png font arial
-set title "Time complexity for merge sort"
+set title "Time complexity for quicksort sort"
 set autoscale
 set xlabel "Size of input"
 set ylabel "Sorting time (in secs)"
