@@ -4,11 +4,11 @@ int a[20][20],q[20],visited[20],notvisited[20],n;
 void dfs(int v)
 {
   int i;
-  for (i=0;i<n;i++)// check all the vertices in the graph
+  for (i=0;i<n;i++)
    {
-     if(a[v][i] != 0 && visited[i] == 0)// adjacent to v and not visited
+     if(a[v][i] != 0 && visited[i] == 0)
       {
-         visited[i]=1;// mark the vertex visited
+         visited[i]=1;
          printf("%d   ", i);
          dfs(i);
       }
@@ -29,7 +29,7 @@ int main()
     printf("\n Enter the starting vertex:");
     scanf("%d",&v);
     printf("\n DFS traversal is:\n");
-    visited[v]=1;// mark the starting vertex as visited
+    visited[v]=1;
     printf("%d   ", v);
     dfs(v);
     j=0;
