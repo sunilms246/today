@@ -1,24 +1,53 @@
 from collections import deque
 
-def bfs(graph, start):
-    q = deque([start])
-    seen = {start}
+def bfs(g, start):
 
-    while q:
-        node = q.popleft()
-        print(node)
+    visited = [start]
+    queue = [start]
 
-        for nxt in graph[node]:
-            if nxt not in seen:
-                seen.add(nxt)
-                q.append(nxt)
+    print("\nBFS Step-by-Step:\n")
 
-# Example graph
-graph = {
-    'A': ['B', 'C'],
-    'B': ['D'],
-    'C': [],
-    'D': []
-}
+    while queue:
 
-bfs(graph, 'A')
+        print("Queue:", queue)
+
+        node = queue.pop(0)
+
+        print("Visited:", node)
+
+        for n in g[node]:
+
+            if n not in visited:
+
+                print("  Adding:", n)
+
+                visited.append(n)
+
+                queue.append(n)
+
+        print()
+
+    print("Final Traversal:", visited)
+
+
+# INPUT
+
+edges = input("Enter edges (A-B): ").split()
+
+g = {}
+
+for e in edges:
+
+    a, b = e.split('-')
+
+    if a not in g:
+        g[a] = []
+
+    if b not in g:
+        g[b] = []
+
+    g[a].append(b)
+
+start = input("Enter start node: ")
+
+bfs(g, start)
