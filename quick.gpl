@@ -1,0 +1,8 @@
+set terminal png font arial
+set xlabel "input size "
+set ylabel "sorting time"
+set title "QUICK SORT TIME COMPLEXITY"
+set autoscale
+set grid
+set output "quick.png"
+plot "quick.dat" title  "quicksort" with lines
