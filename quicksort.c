@@ -12,7 +12,7 @@ int partision(int a[], int low, int high){
     int i=low+1, j=high;
     while(i<=j){
         while((i<=j) && (a[i] <= pi)) i++;
-        while((i<=j) && (a[i] >= pi)) j--;
+        while((i<=j) && (a[j] >= pi)) j--;
         if(i<j) swap(&a[i++], &a[j--]);
     }
     swap(&a[j] , &a[low]);
