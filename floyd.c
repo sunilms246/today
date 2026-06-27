@@ -21,11 +21,13 @@ void main()
         }
         printf("\n");
     }
-    for (i = 1; i <= n; i++)
+
+    // k must be the outermost loop
+    for (k = 1; k <= n; k++)
     {
-        for (j = 1; j <= n; j++)
+        for (i = 1; i <= n; i++)
         {
-            for (k = 1; k <= n; k++)
+            for (j = 1; j <= n; j++)
             {
                 if (a[i][j] > a[i][k] + a[k][j])
                 {
@@ -34,6 +36,7 @@ void main()
             }
         }
     }
+
     printf("Shortest path matrix\n");
     for (i = 1; i <= n; i++)
     {
